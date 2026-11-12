@@ -295,7 +295,7 @@ nmap -sV 172.26.20.3
 | `139/tcp` | open | netbios-ssn | Samba smbd 4 |
 | `445/tcp` | open | netbios-ssn | Samba smbd 4 |
 
-![nmap -sV](imgs/Captura 2.2 -sV.png)
+![nmap -sV](imgs/Captura2.2-sV.png)
 
 > [!WARNING]
 > Usa `nmap` solo en redes donde tengas autorización. El escaneo no autorizado puede ser ilegal.
@@ -349,7 +349,7 @@ arp -n
 | `Indic` | Flags (`C` = Completo/válido) |
 | `Interfaz` | Interfaz de red usada (`eno1`) |
 
-![arp -n](imgs/Captura 3.1 arp -n.png)
+![arp -n](imgs/Captura3.1arp-n.png)
 
 > [!TIP]
 > Las entradas marcadas como `(incompleto)` indican hosts que no respondieron al último ARP request. Las que tienen MAC visible (`C`) son dispositivos activos y accesibles.
