@@ -14,7 +14,7 @@ ip -br -c a
 ip route show default
 ```
 
-![Identificación de red](./ejercicio1.png)
+![Identificación de red](imgs/ejercicio1.png)
 
 ### Respuestas:
 1. **IP y la interfaz de red del equipo:**
