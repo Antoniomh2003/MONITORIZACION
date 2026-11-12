@@ -67,7 +67,7 @@ ps au
 | `RSS` | Memoria física real (KB) |
 | `START` | Hora de inicio del proceso |
 
-![ps au](imgs/Captura 1.2.png)
+![ps au](imgs/Captura1.2.png)
 
 ---
 
@@ -86,7 +86,7 @@ ps aux --sort=-%mem          # ordenar por uso de memoria
 ps aux --sort=-%cpu          # ordenar por uso de CPU
 ```
 
-![ps aux](imgs/Captura 1.3.png)
+![ps aux](imgs/Captura1.3.png)
 
 > [!TIP]
 > Combina `ps aux` con `grep` para encontrar rápidamente cualquier proceso: `ps aux | grep <nombre>`
@@ -109,7 +109,7 @@ ps -u alumno         # todos los procesos de un usuario concreto
 | `ps u -C <nombre>` | Igual que el anterior pero añade USER, %CPU, %MEM, VSZ, RSS, STAT, START |
 | `ps -u <usuario>` | Lista todos los procesos del usuario indicado |
 
-![ps -C nano, ps u -C nano y ps -u alumno](imgs/Captura 1.4.png)
+![ps -C nano, ps u -C nano y ps -u alumno](imgs/Captura1.4.png)
 
 > [!NOTE]
 > En la captura se muestran los tres comandos: primero `ps -C nano` (solo PID y tiempo), luego `ps u -C nano` (con usuario y recursos) y finalmente `ps -u alumno` que lista todos los procesos de la sesión del usuario `alumno`.
@@ -136,7 +136,7 @@ top
 | `1` | Ver CPUs individuales |
 | `h` | Ayuda |
 
-![top](imgs/Captura 1.5.png)
+![top](imgs/Captura1.5.png)
 
 ---
 
@@ -154,7 +154,7 @@ top -b -n 3 > top.info
 | `-n 3` | Número de iteraciones antes de salir |
 | `> top.info` | Redirige la salida al fichero `top.info` |
 
-![top -b -n 3 > top.info](imgs/Captura 1.6.png)
+![top -b -n 3 > top.info](imgs/Captura1.6.png)
 
 > [!TIP]
 > Ideal para registrar el estado del sistema periódicamente en scripts de cron.
@@ -187,8 +187,8 @@ htop
 | `F9` | Matar proceso |
 | `F10` | Salir |
 
-![htop - Vista Main](imgs/Captura 1.7.png)
-![htop - Vista I/O](imgs/Captura 1.8.png)
+![htop - Vista Main](imgs/Captura1.7.png)
+![htop - Vista I/O](imgs/Captura1.8.png)
 
 > [!NOTE]
 > Si no tienes `htop` instalado: `sudo apt install htop`
@@ -217,7 +217,7 @@ free -s 3   # refresca cada 3 segundos
 | `buff/cache` | Usada por buffers/caché del kernel |
 | `available` | Memoria disponible para nuevas aplicaciones |
 
-![free, free -h, free -c 3, free -s 3](imgs/Captura 2.1.png)
+![free, free -h, free -c 3, free -s 3](imgs/Captura2.1.png)
 
 > [!TIP]
 > La columna `available` es más relevante que `free` para saber cuánta RAM puedes usar realmente.
