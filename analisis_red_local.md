@@ -51,10 +51,10 @@ ip neigh
 
 #### Capturas:
 - **Salida de `arp -a`:**  
-  ![Comando arp -a](./ejercicio2.2.1.png)
+  ![Comando arp -a](imgs/ejercicio2.2.1.png)
 
 - **Salida de `arp -n`:**  
-  ![Comando arp -n](./ejercicio2.2.2.png)
+  ![Comando arp -n](imgs/ejercicio2.2.2.png)
 
 #### ¿Qué hace cada comando?
 - **`arp -a`**: Muestra la tabla de caché ARP (resolución de direcciones IP a MAC) intentando resolver mediante DNS inverso los nombres de host de las direcciones IP detectadas.
@@ -81,7 +81,7 @@ ping -c 2 172.26.20.3
 ip neigh show 172.26.20.3
 ```
 
-![Generar y consultar entrada ARP](./ejercicio2.4.png)
+![Generar y consultar entrada ARP](imgs/ejercicio2.4.png)
 
 - Tras lanzar el ping, el protocolo ARP resuelve la dirección física del profesor:
   - **IP:** `172.26.20.3`
@@ -98,7 +98,7 @@ ip neigh show 172.26.20.3
 sudo ip neigh del 172.26.20.3 dev eno1 && ip neigh show 172.26.20.3
 ```
 
-![Eliminar entrada ARP](./ejercicio2.5.png)
+![Eliminar entrada ARP](imgs/ejercicio2.5.png)
 
 - Al borrar la entrada de la tabla ARP con `ip neigh del`, la consulta inmediata posterior no devuelve ningún resultado, confirmando que la asociación ha sido eliminada con éxito de la caché local.
 
@@ -112,7 +112,7 @@ ping -c 2 172.26.20.3
 ip neigh show 172.26.20.3
 ```
 
-![Regenerar entrada ARP](./ejercicio2.6.png)
+![Regenerar entrada ARP](imgs/ejercicio2.6.png)
 
 - Al volver a emitir tráfico hacia la IP del profesor (`ping`), el sistema vuelve a enviar una petición ARP (*ARP Request*) y recibe la respuesta (*ARP Reply*), almacenando de nuevo la entrada en estado `REACHABLE` con la MAC `f4:b5:20:40:51:a6`.
 
@@ -127,7 +127,7 @@ ip neigh show 172.26.20.3
 nmap -sn 172.26.20.0/24
 ```
 
-![Escaneo de red con nmap -sn](./ejercicio3.1.png)
+![Escaneo de red con nmap -sn](imgs/ejercicio3.1.png)
 
 - **Resultado:** Se han escaneado 256 direcciones IP y se han encontrado 2 hosts activos:
   - `172.26.20.3` (Máquina del profesor)
@@ -150,7 +150,7 @@ nmap 172.26.20.3
 nmap -sV 172.26.20.3
 ```
 
-![Escaneo de puertos y servicios con nmap y -sV](./ejercicio4.1.png)
+![Escaneo de puertos y servicios con nmap y -sV](imgs/ejercicio4.1.png)
 
 #### Puertos y servicios descubiertos:
 | Puerto | Estado | Servicio | Versión detectada (`-sV`) |
